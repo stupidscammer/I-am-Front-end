@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <script src="test.js"></script> -->
+    <script>
+        const input = ["s", "t", "a", "r", "m", "i", "n", "d"];
+        const result = [];
+        function customReverse(accumulator, letter) {
+            accumulator.unshift(letter);
+            return accumulator;
+        }
+        function assignResult(array) {
+            Object.assign(result, array);
+            return result;
+        }
+        assignResult(input.reduce(customReverse, []));
+        console.log(result);
+        const testPassed = input.reverse().join("") === result.join("");
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+</html>
